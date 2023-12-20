@@ -34,10 +34,8 @@
 
 <?php
   if(isset($_POST['updated'])){
-    echo "Posted";
     $id = $_POST['hidden_id'];
     $updated_task = $_POST['updated_task'];
-    echo $id;
     $sql = "UPDATE todo_list SET task='$updated_task' WHERE id = $id";
     $result = mysqli_query($con, $sql);
 
