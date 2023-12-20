@@ -11,13 +11,44 @@
   <?php
       include "connection.php";
       $id= $_GET["id"];
-      $task = $_GET["task"];
-    ?>
-    <form action="/unish/todo/update_add.php" method="post">
+      $sql = "select * from todo_list where id = $id";
+      $result = mysqli_query($con, $sql);
+      while($row=mysqli_fetch_assoc($result)){
+            $task = $row['task'];
+            $id = $row['id']; 
+      }
+      // $task_sql = mysqli_query($con,"select * from todo_list where id = $id");
+      // // $result = $con->query($task_sql);
+      // $task = $task_sql['task'];
+      // echo $task;
+            ?>
+    <form action="" method="post">
         <div class="container">
-        <input value="<?php echo $task;?>" class="input" type="text" placeholder="Enter the task...">
-        <button type="submit" class="btn btn-primary">Update</button>    
+        <input value="<?php echo $task;?>" class="input" type="text" name="updated_task">
+        <input type="hidden" name="hidden_id" value="<?php echo $id;?>">
+        <input type="submit" name="updated" value="Update" class="btn btn-primary">   
     </div>
     </form>
   </body>
 </html>
+
+<?php
+  if(isset($_POST['updated'])){
+    echo "Posted";
+    $id = $_POST['hidden_id'];
+    $updated_task = $_POST['updated_task'];
+    echo $id;
+    $sql = "UPDATE todo_list SET task='$updated_task' WHERE id = $id";
+    $result = mysqli_query($con, $sql);
+
+    if($result){
+      echo "
+        <script>
+          alert('Updated successfully!!');
+        </script>
+      ";
+      header("Location:index.php");
+    }
+  }
+?>
+

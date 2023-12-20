@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
             <td>" . $row['task'] . "</td>
             <td>
                 <a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger'>Delete</a>
-                <a href='update.php?id=" . $row['id'] . "&task=" .$row['task']. "' class='btn btn-primary' id='update''>Update</a>
+                <a href='update.php?id=" . $row['id'] ."' class='btn btn-primary' id='update''>Update</a>
 
             </td>
         </tr>";
