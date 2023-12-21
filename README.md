@@ -97,7 +97,4 @@ If you'd like to contribute to this project, please follow these steps:
 
 ## Acknowledgments
 
-- This project is inspired by the need for a simple, minimalistic todo application.
-- Special thanks to the PHP community for their continuous support and contributions.
-
 Feel free to explore, modify, and enhance the Simple PHP Todo App to suit your needs. If you encounter any issues or have suggestions for improvement, don't hesitate to open an issue or submit a pull request. Happy coding!
