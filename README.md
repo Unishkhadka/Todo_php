@@ -55,10 +55,12 @@ To run this application, you need:
 
 ## Usage
 
-1. Open the application in your web browser.
-2. Add tasks using the input field and "Add Task" button.
-3. Update tasks by clicking on the task and making the necessary changes.
-4. Delete tasks by clicking the "Delete" button next to the task.
+1. Register and sign up to create your account.
+2. Log in with your credentials.
+2. Open the application in your web browser.
+3. Add tasks using the input field and "Add Task" button.
+4. Update tasks by clicking on the task and making the necessary changes.
+5. Delete tasks by clicking the "Delete" button next to the task.
 
 ## Contributing
 
