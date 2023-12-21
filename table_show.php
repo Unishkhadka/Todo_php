@@ -1,6 +1,8 @@
 <?php
-include "connection.php";
-$result = $con->query("SELECT * from todo_list");
+include "common/connection.php";
+session_start();
+    $Uid = $_SESSION['Uid'];
+$result = $con->query("SELECT * from todo_list where User_Id='$Uid'");
 
 echo "<table class='table'>";
 echo "
@@ -17,8 +19,8 @@ while ($row = $result->fetch_assoc()) {
         <tr>
             <td>" . $row['task'] . "</td>
             <td>
-                <a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger'>Delete</a>
-                <a href='update.php?id=" . $row['id'] ."' class='btn btn-primary' id='update''>Update</a>
+                <a href='delete.php?id=" . $row['Task_id'] . "' class='btn btn-danger'>Delete</a>
+                <a href='update.php?id=" . $row['Task_id'] ."' class='btn btn-primary' id='update''>Update</a>
 
             </td>
         </tr>";
