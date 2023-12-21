@@ -18,8 +18,8 @@ $result = $con->query("SELECT * from todo_list where User_Id='$Uid'");
 <body>
 
     <div class="container mt-5 d-flex justify-content-center"> <!-- Added styles for horizontal centering -->
-        <table class='table table-bordered' style="width:60%;">
-            <thead>
+        <table class='table table-bordered table-info' style="width:60%;">
+            <thead class='table-dark'>
                 <tr>
                     <th>
                         <h3 class="text-center">Task</h3>
@@ -29,7 +29,7 @@ $result = $con->query("SELECT * from todo_list where User_Id='$Uid'");
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
 
                 <?php
                 while ($row = $result->fetch_assoc()) {
