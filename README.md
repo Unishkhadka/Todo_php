@@ -3,7 +3,7 @@
 Welcome to the Simple PHP Todo App repository! This is a basic todo application built using PHP, designed to help you manage your tasks in a straightforward manner. This project serves as a starting point for those who want to understand the fundamentals of building a web application with PHP.
 
 ## Features
-
+-  **User Registration and Signup:** Register and sign up to have your own personalized todo list.
 - **Add Tasks:** Easily add new tasks to your todo list.
 - **Update Tasks:** Modify tasks easily if necessary.
 - **Delete Tasks:** Remove tasks from your list when they are no longer needed or completed.
