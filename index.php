@@ -7,3 +7,4 @@ if (isset($Uid)) {
 } else {
   header("Location: login.php");
 }
+?>

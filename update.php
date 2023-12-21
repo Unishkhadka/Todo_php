@@ -17,8 +17,9 @@
 }
     </style>
   </head>
-  <body>
+  <body style="background-color: #659DBD;">
   <?php
+      include "common/logout_html.php";
       include "common/connection.php";
       $id= $_GET["id"];
       $sql = "select * from todo_list where Task_id = $id";
@@ -33,7 +34,7 @@
       // echo $task;
             ?>
     <form action="" method="post">
-        <div class="container">
+        <div class="container-fluid text-center">
         <input value="<?php echo $task;?>" class="input" type="text" name="updated_task">
         <input type="hidden" name="hidden_id" value="<?php echo $id;?>">
         <input type="submit" name="updated" value="Update" class="btn btn-primary">   
