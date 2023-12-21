@@ -39,10 +39,10 @@ To run this application, you need:
    - **Create User Table:**
      - Within the `todo` database, create a table named `user`.
      - The table should have the following columns:
-       - `id` (auto-increment, primary key)
-       - `username` (varchar to store the username)
-       - `email` (varchar to store the email address)
-       - `password` (varchar to store the password)
+       - `User_id` (auto-increment, primary key)
+       - `Username` (varchar to store the username)
+       - `Email` (varchar to store the email address)
+       - `Password` (varchar to store the password)
 
        You can use the following SQL query to create the table:
 
