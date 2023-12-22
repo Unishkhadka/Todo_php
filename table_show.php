@@ -1,6 +1,5 @@
 <?php
 include "common/connection.php";
-session_start();
 $Uid = $_SESSION['Uid'];
 $result = $con->query("SELECT * from todo_list where User_Id='$Uid'");
 ?>
